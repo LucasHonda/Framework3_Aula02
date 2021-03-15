@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/system.js"></script>
+    <script>
+        System.defaultJSExtensions = true;
+        System.import('js/index.js').catch(err => console.error(err));
+    </script>
+    <title>Matérias</title>
+</head>
+
+<body>
+    <center>
+        <h1>Matérias</h1>
+    </center>
+
+    <div class="container-fluid" style="align-self: center;">
+        <div class="row g-3">
+            <div class="col-md-8">
+                <center>
+                    <div class="row col-12">
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Código</span>
+                            </div>
+                            <input class="form-control" required id="codigo" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Data de ínicio</span>
+                            </div>
+                            <input class="form-control" required id="data" aria-label="Username" aria-describedby="basic-addon1" type="date">
+                        </div>
+                        <div class="input-group mb-3 col-12">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Descrição</span>
+                            </div>
+                            <input class="form-control" required id="descricao" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3 col-12">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Valor da disciplina</span>
+                            </div>
+                            <input class="form-control" required id="valor" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3 col-6">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Matéria Optativa?</span>
+                            </div>
+                            <select class="form-select" id="optativa">
+                                <option selected>Selecionar...</option>
+                                <option value="0">Sim</option>
+                                <option value="1">Não</option>
+                            </select>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <div class="col-md-4">
+                <div class="row col-auto g-2">
+
+                    <button type="submit" class="btn btn-secondary btn-lg btn-block" id="BotaoImportar">Importar</button>
+
+                    <button type="submit" class="btn btn-success btn-lg btn-block" id="BotaoIncluir">Incluir</button>
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="BotaoConsultar">Consultar</button>
+
+                    <button type="submit" class="btn btn-danger btn-lg btn-block" id="BotaoExcluir">Excluir</button>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row g-2">
+            <table class="table table-dark table-striped">
+                <thea>
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Data de ínicio</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">É optativa?</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbodyResultados">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "materias": [
+    {
+      "codigo": "123",
+      "descricao": "asd",
+      "data": "",
+      "valor": 1,
+      "optativa": true,
+      "id": 124
+    }
+  ]
+}
